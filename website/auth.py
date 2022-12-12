@@ -26,7 +26,7 @@ def login():
             print(email)
             flash("Email or password incorrect !", category="error")
 
-    return render_template("login.html")
+    return render_template("login.html", user=current_user)
 
 
 @auth.route("/sign-up", methods=["GET", "POST"])
@@ -56,7 +56,7 @@ def sign_up():
             flash("User created !")
             return redirect(url_for("views.home"))
 
-    return render_template("signup.html")
+    return render_template("signup.html", user=current_user)
 
 
 
@@ -65,4 +65,4 @@ def sign_up():
 def logout():
     logout_user()
 
-    return redirect(url_for="views.home")
+    return redirect("/login")
