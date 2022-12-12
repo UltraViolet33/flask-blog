@@ -11,7 +11,7 @@ class User(db.Model, UserMixin):
     date_created = db.Column(db.DateTime(timezone=True), default=func.now())
     posts = db.relationship("Post", backref="user", passive_deletes=True)
     comments = db.relationship(
-        "Comment", backref=" user", passive_deletes=True)
+        "Comment", backref="user", passive_deletes=True)
 
  
 class Post(db.Model):
