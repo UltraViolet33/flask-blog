@@ -2,7 +2,7 @@
 
 This is a little blog project with the web framework Flask in python
 
-My goal was to learn discover this framework
+My goal was to discover this framework
 
 ## Technologies :
 
